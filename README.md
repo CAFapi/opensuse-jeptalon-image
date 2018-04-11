@@ -1,6 +1,6 @@
 # openSUSE and JepTalon image
 
-This project builds on the openSUSE Python2 image [here](https://github.com/CAFapi/opensuse-python2-image), Talon and Jep are then installed on the image. This image can be used as a base by projects which require Python2, Talon and Jep.
+This project builds on the openSUSE JDK8 image [here](https://github.com/CAFapi/opensuse-jdk8-image), Python, Talon and Jep are then installed on the image. This image can be used as a base by projects which require Python2, Talon and Jep.
 
 ### Tini
 [Tini](https://github.com/krallin/tini) is pre-installed in the container.  If the image entrypoint is not overwritten then it will be automatically used.
