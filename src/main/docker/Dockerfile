@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-FROM dev/cafapi/opensuse-jdk8:1.0.0-SNAPSHOT
+FROM cafinternal/prereleases:opensuse-jdk8-1.0.0-SNAPSHOT
 
 ENV PD_PRELOAD=/usr/lib64/libpython2.7.so.1.0
 ENV LD_LIBRARY_PATH=/usr/lib/python2.7/site-packages/talon:/usr/lib64/python2.7/site-packages/jep
