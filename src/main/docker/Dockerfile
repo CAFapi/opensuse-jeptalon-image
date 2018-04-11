@@ -14,15 +14,13 @@
 # limitations under the License.
 #
 
-FROM cafapi/opensuse-base:1
+FROM dev/cafapi/opensuse-jdk8:1.0.0-SNAPSHOT
 
-ENV JAVA_HOME=/usr/lib64/jvm/java-1.8.0-openjdk-1.8.0
 ENV PD_PRELOAD=/usr/lib64/libpython2.7.so.1.0
-ENV LD_LIBRARY_PATH=/usr/lib/python2.7/site-packages/talon:/usr/lib64/python2.7/site-packages/jep:/usr/lib64/python2.7/config:/usr/lib64/python2.7/lib-dynload:/usr/lib64:/usr/lib
+ENV LD_LIBRARY_PATH=/usr/lib/python2.7/site-packages/talon:/usr/lib64/python2.7/site-packages/jep
 ENV PYTHONPATH=/maven
 
-RUN zypper -n in java-1_8_0-openjdk-devel && \
-zypper -n install python-devel && \
+RUN zypper -n install python-devel && \
 zypper -n install python-pip && \
 zypper -n install python-matplotlib && \
 zypper -n install zlib-devel && \
@@ -34,13 +32,6 @@ pip install regex==2014.12.24 && \
 pip install numpy==1.8.2 && \
 pip install talon==1.3.4 && \
 pip install jep==3.5.2 
-
-# Install Java certificate installation script
-ADD https://raw.githubusercontent.com/CAFapi/caf-common/v1.14.0/container-cert-script/install-ca-cert-java.sh \
-    /startup/startup.d/
-
-RUN chmod +x /startup/startup.d/install-ca-cert-java.sh 
-   
 
 # Tag the image
 ARG BUILD_NUMBER
