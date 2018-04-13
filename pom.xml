@@ -28,7 +28,7 @@
 
     <name>openSUSE JepTalon image</name>
     <description>An openSUSE-based image which includes jeptalon.</description>
-    <url>https://github.com/CAFapi/opensuse-jeptalon-base</url>
+    <url>https://github.com/CAFapi/opensuse-jeptalon-image</url>
 
     <parent>
         <groupId>com.github.cafapi</groupId>
@@ -126,9 +126,9 @@
     </build>
 
     <scm>
-        <connection>scm:git:https://github.com/CAFapi/opensuse-jeptalon-base.git</connection>
-        <developerConnection>scm:git:https://github.com/CAFapi/opensuse-jeptalon-base</developerConnection>
-        <url>https://github.com/CAFapi/opensuse-jeptalon-base</url>
+        <connection>scm:git:https://github.com/CAFapi/opensuse-jeptalon-image.git</connection>
+        <developerConnection>scm:git:https://github.com/CAFapi/opensuse-jeptalon-image</developerConnection>
+        <url>https://github.com/CAFapi/opensuse-jeptalon-image</url>
     </scm>
 
 </project>
