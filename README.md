@@ -1,6 +1,6 @@
 # openSUSE and JepTalon image
 
-This project builds on the openSUSE JDK8 image [here](https://github.com/CAFapi/opensuse-java8-images), Python, Talon and Jep are then installed on the image. This image can be used as a base by projects which require Python2, Talon and Jep.
+This project builds on the openSUSE JDK8 image [here](https://github.com/CAFapi/opensuse-java8-images/blob/develop/src/main/docker/jdk/Dockerfile), Python, Talon and Jep are then installed on the image. This image can be used as a base by projects which require Python2, Talon and Jep.
 Jep is a library used for executing python scripts from within java code, more information on Jep can be found [here](https://github.com/ninia/jep/blob/master/README.rst).
 Talon is a mailgun library used for extracting and detecting quotations and signatures from within file such as emails, more information on Talon can be found [here](https://github.com/mailgun/talon/blob/master/README.rst).
 
