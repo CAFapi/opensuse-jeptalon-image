@@ -1,4 +1,3 @@
-!not-ready-for-release!
 
 #### Version Number
 ${version-number}
@@ -8,3 +7,4 @@ ${version-number}
 - Initial release of base image.
 
 #### Known Issues
+- None
