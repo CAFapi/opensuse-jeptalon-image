@@ -98,7 +98,6 @@
                 </executions>
                 <configuration>
                     <autoPull>always</autoPull>
-                    <verbose>true</verbose>
                     <images>
                         <image>
                             <name>${dockerCafImagePrefix}opensuse-jeptalon${dockerProjectVersion}</name>
@@ -120,6 +119,7 @@
                             </build>
                         </image>
                     </images>
+                    <verbose>true</verbose>
                 </configuration>
             </plugin>
         </plugins>
