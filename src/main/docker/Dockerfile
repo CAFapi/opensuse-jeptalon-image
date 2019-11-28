@@ -20,12 +20,11 @@ RUN zypper -n install python-devel && \
     zypper -n install python-pip && \
     zypper -n install python-matplotlib && \
     zypper -n install zlib-devel && \
-    zypper -n install python-numpy && \
+    zypper -n install python-numpy-devel && \
     zypper -n install python-lxml && \
     zypper -n install python-scipy && \
     zypper -n install gcc-c++ && \
     pip install regex==2014.12.24 && \
-    pip install numpy==1.16.1 && \
     pip install talon==1.3.4 && \
     pip install jep==3.8.2
 
