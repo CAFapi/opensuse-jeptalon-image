@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-FROM cafapi/opensuse-jdk8:1
+FROM cafinternal/prereleases:opensuse-jdk8-2.0.0-SNAPSHOT
 
 RUN zypper -n install python-devel && \
     zypper -n install python-pip && \
