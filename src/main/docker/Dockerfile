@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-FROM cafinternal/prereleases:opensuse-jdk8-3.0.0-SNAPSHOT
+FROM cafinternal/prereleases:opensuse-jdk11-3.0.0-SNAPSHOT
 
 RUN zypper -n refresh && \
     zypper -n update && \
@@ -31,7 +31,7 @@ RUN zypper -n refresh && \
     pip install jep==3.8.2
 
 ENV LD_PRELOAD=/usr/lib64/python2.7/config/libpython2.7.so
-ENV LD_LIBRARY_PATH=/usr/lib/python2.7/site-packages/talon:/usr/lib64/python2.7/site-packages/jep
+ENV LD_LIBRARY_PATH=/usr/local/lib/python2.7/site-packages/talon:/usr/local/lib64/python2.7/site-packages/jep
 ENV PYTHONPATH=/maven
 
 # Tag the image
