@@ -28,10 +28,11 @@ RUN zypper -n refresh && \
     zypper -n install gcc-c++ && \
     pip install regex==2014.12.24 && \
     pip install talon==1.3.4 && \
-    pip install jep==3.9.0
+#    pip install jep==3.9.0
+    pip install jep==3.8.2
 
 ENV LD_PRELOAD=/usr/lib64/python2.7/config/libpython2.7.so
-ENV LD_LIBRARY_PATH=/usr/lib/python2.7/site-packages/talon:/usr/lib64/python2.7/site-packages/jep
+ENV LD_LIBRARY_PATH=/usr/lib/python2.7/site-packages/talon/:/usr/lib64/python2.7/site-packages/jep/
 ENV PYTHONPATH=/maven
 
 # Tag the image
