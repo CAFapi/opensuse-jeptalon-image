@@ -15,7 +15,8 @@
 #
 
 ARG DOCKER_HUB_PUBLIC=docker.io
-FROM ${DOCKER_HUB_PUBLIC}/cafapi/opensuse-jdk11:3
+ARG DOCKER_HUB_PRIVATE=docker.io
+FROM ${DOCKER_HUB_PRIVATE}/cafinternal/prereleases:opensuse-jdk11-3.2.0-SNAPSHOT
 
 RUN zypper -n refresh && \
     zypper -n update && \
