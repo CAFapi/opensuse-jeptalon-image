@@ -14,8 +14,10 @@
 # limitations under the License.
 #
 
+# Docker registries
 ARG DOCKER_HUB_PUBLIC=docker.io
 ARG DOCKER_HUB_PRIVATE=docker.io
+
 FROM ${DOCKER_HUB_PRIVATE}/cafinternal/prereleases:opensuse-jdk11-3.2.0-SNAPSHOT
 
 RUN zypper -n refresh && \
