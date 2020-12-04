@@ -20,7 +20,8 @@ ARG DOCKER_HUB_PRIVATE=docker.io
 
 FROM ${DOCKER_HUB_PRIVATE}/cafinternal/prereleases:opensuse-jdk11-3.2.0-SNAPSHOT
 
-RUN zypper -n refresh && \
+RUN zypper al curl postgresql dejavu-fonts java-11-openjdk && \
+    zypper -n refresh && \
     zypper -n update && \
     zypper -n install python-devel && \
     zypper -n install python-pip && \
