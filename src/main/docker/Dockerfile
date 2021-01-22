@@ -37,16 +37,3 @@ RUN zypper -n refresh && \
 ENV LD_PRELOAD=/usr/lib64/python2.7/config/libpython2.7.so
 ENV LD_LIBRARY_PATH=/usr/local/lib/python2.7/site-packages/talon:/usr/local/lib64/python2.7/site-packages/jep
 ENV PYTHONPATH=/maven
-
-# Tag the image
-ARG BUILD_NUMBER
-ARG BUILD_DATE
-ARG GIT_REPO
-ARG GIT_BRANCH
-ARG GIT_COMMIT
-
-LABEL Build.Number="$BUILD_NUMBER" \
-      Build.Date="$BUILD_DATE" \
-      Git.Repo="$GIT_REPO" \
-      Git.Branch="$GIT_BRANCH" \
-      Git.Commit="$GIT_COMMIT"
