@@ -14,11 +14,10 @@
 # limitations under the License.
 #
 
-# Docker registries
+# Docker registry
 ARG DOCKER_HUB_PUBLIC=docker.io
-ARG DOCKER_HUB_PRIVATE=docker.io
 
-FROM ${DOCKER_HUB_PRIVATE}/cafapi/opensuse-jdk11:3
+FROM ${DOCKER_HUB_PUBLIC}/cafapi/opensuse-jdk11:3
 
 RUN zypper -n refresh && \
     zypper -n update && \
