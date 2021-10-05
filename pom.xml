@@ -23,7 +23,7 @@
 
     <groupId>com.github.cafapi</groupId>
     <artifactId>opensuse-jeptalon-image</artifactId>
-    <version>3.4.2-SNAPSHOT</version>
+    <version>3.4.2-602</version>
     <packaging>pom</packaging>
 
     <name>openSUSE JepTalon image</name>
