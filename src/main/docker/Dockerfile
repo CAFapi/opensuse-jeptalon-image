@@ -35,5 +35,5 @@ RUN zypper -n refresh && \
     zypper -n clean --all
 
 ENV LD_PRELOAD=/usr/lib64/python3.6/config-3.6m-x86_64-linux-gnu/libpython3.6m.so
-ENV LD_LIBRARY_PATH=/usr/local/lib/python3.6/site-packages/talon:/usr/local/lib64/python3.6/site-packages/jep
+ENV LD_LIBRARY_PATH=/usr/lib/python3.6/site-packages/talon:/usr/lib64/python3.6/site-packages/jep
 ENV PYTHONPATH=/maven
