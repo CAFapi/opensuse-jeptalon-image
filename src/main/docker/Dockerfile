@@ -28,6 +28,7 @@ RUN zypper -n refresh && \
     zypper -n install python3-numpy-devel && \
     zypper -n install python3-lxml && \
     zypper -n install python3-scipy && \
+    zypper -n install python3-scikit-learn && \
     zypper -n install gcc-c++ && \
     pip install regex==2014.12.24 && \
     pip install talon==1.3.4 && \
