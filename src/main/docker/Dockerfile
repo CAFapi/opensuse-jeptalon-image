@@ -21,19 +21,19 @@ FROM ${DOCKER_HUB_PUBLIC}/cafapi/prereleases:opensuse-jdk11-3.5.0-SNAPSHOT
 
 RUN zypper -n refresh && \
     zypper -n update && \
-    zypper -n install python-devel && \
-    zypper -n install python-pip && \
-    zypper -n install python-matplotlib && \
+    zypper -n install python3-devel && \
+    zypper -n install python3-pip && \
+    zypper -n install python3-matplotlib && \
     zypper -n install zlib-devel && \
-    zypper -n install python-numpy-devel && \
-    zypper -n install python-lxml && \
-    zypper -n install python-scipy && \
+    zypper -n install python3-numpy-devel && \
+    zypper -n install python3-lxml && \
+    zypper -n install python3-scipy && \
     zypper -n install gcc-c++ && \
     pip install regex==2014.12.24 && \
     pip install talon==1.3.4 && \
     pip install jep==3.8.2 && \
     zypper -n clean --all
 
-ENV LD_PRELOAD=/usr/lib64/python2.7/config/libpython2.7.so
-ENV LD_LIBRARY_PATH=/usr/local/lib/python2.7/site-packages/talon:/usr/local/lib64/python2.7/site-packages/jep
+ENV LD_PRELOAD=/usr/lib64/python3.6/config-3.6m-x86_64-linux-gnu/libpython3.6m.so
+ENV LD_LIBRARY_PATH=/usr/local/lib/python3.6/site-packages/talon:/usr/local/lib64/python3.6/site-packages/jep
 ENV PYTHONPATH=/maven
