@@ -17,7 +17,7 @@
 # Docker registry
 ARG DOCKER_HUB_PUBLIC=docker.io
 
-FROM ${DOCKER_HUB_PUBLIC}/cafapi/opensuse-jdk11:3
+FROM ${DOCKER_HUB_PUBLIC}/cafapi/opensuse-jdk11:3.4.6
 
 RUN zypper -n refresh && \
     zypper -n update && \
