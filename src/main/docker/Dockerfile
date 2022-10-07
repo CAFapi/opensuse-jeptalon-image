@@ -30,8 +30,8 @@ RUN zypper -n refresh && \
     zypper -n install python3-scipy && \
     zypper -n install gcc-c++ && \
     pip install regex==2022.6.2 && \
-    pip install talon==1.4.4 && \
-    pip install jep==4.0.3 && \
+    pip install talon==1.3.4 && \
+    pip install jep==3.8.2 && \
     zypper -n clean --all
 
 ENV LD_PRELOAD=/usr/lib64/python3.6/config-3.6m-x86_64-linux-gnu/libpython3.6m.so
