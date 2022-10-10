@@ -18,6 +18,7 @@
 ARG DOCKER_HUB_PUBLIC=docker.io
 
 FROM ${DOCKER_HUB_PUBLIC}/cafapi/opensuse-jdk11:3
+FROM ${DOCKER_HUB_PUBLIC}/cafapi/prereleases:opensuse-jdk11:3.7.0-rory-tumbleweed-SNAPSHOT
 
 RUN zypper -n refresh && \
     zypper -n update && \
@@ -34,6 +35,6 @@ RUN zypper -n refresh && \
     pip install jep==3.8.2 && \
     zypper -n clean --all
 
-ENV LD_PRELOAD=/usr/lib64/python3.6/config-3.6m-x86_64-linux-gnu/libpython3.6m.so
-ENV LD_LIBRARY_PATH=/usr/lib/python3.6/site-packages/talon:/usr/lib64/python3.6/site-packages/jep
+ENV LD_PRELOAD=//usr/lib64/python3.10/config-3.10-x86_64-linux-gnu/libpython3.10.so
+ENV LD_LIBRARY_PATH=/usr/lib/python3.10/site-packages/talon:/usr/lib64/python3.10/site-packages/jep
 ENV PYTHONPATH=/maven
