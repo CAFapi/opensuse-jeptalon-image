@@ -19,6 +19,7 @@ ARG DOCKER_HUB_PUBLIC=docker.io
 
 FROM ${DOCKER_HUB_PUBLIC}/cafapi/prereleases:opensuse-jdk11-3.7.0-rory-tumbleweed-SNAPSHOT
 
+# Pinning version of scikit-learn to 1.0.1 to avoid this error: "Trying to unpickle estimator LinearSVC from version 1.0.1 when using version 1.1.2."
 RUN zypper -n refresh && \
     zypper -n update && \
     zypper -n install python3-devel && \
@@ -29,6 +30,7 @@ RUN zypper -n refresh && \
     zypper -n install python3-lxml && \
     zypper -n install python3-scipy && \
     zypper -n install gcc-c++ && \
+    pip install scikit-learn==1.0.1 && \
     pip install regex==2022.6.2 && \
     pip install -U https://github.com/mailgun/talon/archive/refs/tags/v1.6.0.zip  && \
     pip install jep==4.0.3 && \
