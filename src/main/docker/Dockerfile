@@ -17,7 +17,7 @@
 # Docker registry
 ARG DOCKER_HUB_PUBLIC=docker.io
 
-FROM ${DOCKER_HUB_PUBLIC}/cafapi/prereleases:opensuse-jdk11:3.7.0-rory-tumbleweed-SNAPSHOT
+FROM ${DOCKER_HUB_PUBLIC}/cafapi/prereleases:opensuse-jdk11-3.7.0-rory-tumbleweed-SNAPSHOT
 
 RUN zypper -n refresh && \
     zypper -n update && \
