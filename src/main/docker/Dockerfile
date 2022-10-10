@@ -17,7 +17,6 @@
 # Docker registry
 ARG DOCKER_HUB_PUBLIC=docker.io
 
-FROM ${DOCKER_HUB_PUBLIC}/cafapi/opensuse-jdk11:3
 FROM ${DOCKER_HUB_PUBLIC}/cafapi/prereleases:opensuse-jdk11:3.7.0-rory-tumbleweed-SNAPSHOT
 
 RUN zypper -n refresh && \
@@ -31,8 +30,8 @@ RUN zypper -n refresh && \
     zypper -n install python3-scipy && \
     zypper -n install gcc-c++ && \
     pip install regex==2022.6.2 && \
-    pip install talon==1.3.4 && \
-    pip install jep==3.8.2 && \
+    pip install -U https://github.com/mailgun/talon/archive/refs/tags/v1.6.0.zip  && \
+    pip install jep==4.0.3 && \
     zypper -n clean --all
 
 ENV LD_PRELOAD=//usr/lib64/python3.10/config-3.10-x86_64-linux-gnu/libpython3.10.so
