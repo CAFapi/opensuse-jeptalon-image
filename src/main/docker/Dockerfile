@@ -34,6 +34,6 @@ RUN zypper -n refresh && \
     pip install jep==4.0.3 && \
     zypper -n clean --all
 
-ENV LD_PRELOAD=//usr/lib64/python3.10/config-3.10-x86_64-linux-gnu/libpython3.10.so
+ENV LD_PRELOAD=/usr/lib64/python3.10/config-3.10-x86_64-linux-gnu/libpython3.10.so
 ENV LD_LIBRARY_PATH=/usr/lib/python3.10/site-packages/talon:/usr/lib64/python3.10/site-packages/jep
 ENV PYTHONPATH=/maven
