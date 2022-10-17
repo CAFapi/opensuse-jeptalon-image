@@ -32,7 +32,7 @@ RUN zypper -n refresh && \
     zypper -n install gcc-c++ && \
     pip install scikit-learn==1.0.1 && \
     pip install regex==2022.6.2 && \
-    pip install -U https://github.com/mailgun/talon/archive/refs/tags/v1.6.0.zip  && \
+    pip install -U https://github.com/rorytorneymf/talon/archive/refs/tags/1.6.0-with-8138ea9a604f037f47f544dfb805f13d26696275-reverted.zip  && \
     pip install jep==4.0.3 && \
     zypper -n clean --all
 
