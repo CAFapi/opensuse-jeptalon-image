@@ -17,7 +17,7 @@
 # Docker registry
 ARG DOCKER_HUB_PUBLIC=docker.io
 
-FROM ${DOCKER_HUB_PUBLIC}/cafapi/prereleases:opensuse-jdk11-3.7.0-rory-tumbleweed-SNAPSHOT
+FROM ${DOCKER_HUB_PUBLIC}/cafapi/prereleases:opensuse-jdk11-3.7.0-477072-SNAPSHOT
 
 # Pinning version of scikit-learn to 1.0.1 to avoid this error: "Trying to unpickle estimator LinearSVC from version 1.0.1 when using version 1.1.2."
 RUN zypper -n refresh && \
