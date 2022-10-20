@@ -17,23 +17,26 @@
 # Docker registry
 ARG DOCKER_HUB_PUBLIC=docker.io
 
-FROM ${DOCKER_HUB_PUBLIC}/cafapi/opensuse-jdk11:3.4.6
+FROM ${DOCKER_HUB_PUBLIC}/cafapi/prereleases:opensuse-jdk11-3.7.0-477072-SNAPSHOT
 
+# Pinning version of scikit-learn to 1.0.1 to avoid this error: "Trying to unpickle estimator LinearSVC from version 1.0.1 when using version 1.1.2."
 RUN zypper -n refresh && \
     zypper -n update && \
-    zypper -n install python-devel && \
-    zypper -n install python-pip && \
-    zypper -n install python-matplotlib && \
+    zypper -n install python38 && \
+    zypper -n install python38-devel && \
+    zypper -n install python38-pip && \
+    zypper -n install python38-matplotlib && \
     zypper -n install zlib-devel && \
-    zypper -n install python-numpy-devel && \
-    zypper -n install python-lxml && \
-    zypper -n install python-scipy && \
+    zypper -n install python38-numpy-devel && \
+    zypper -n install python38-lxml && \
+    zypper -n install python38-scipy && \
     zypper -n install gcc-c++ && \
-    pip install regex==2014.12.24 && \
-    pip install talon==1.3.4 && \
-    pip install jep==3.8.2 && \
+    pip install scikit-learn==1.0.1 && \
+    pip install regex==2022.6.2 && \
+    pip install -U https://github.com/rorytorneymf/talon/archive/refs/tags/1.6.0-with-8138ea9a604f037f47f544dfb805f13d26696275-reverted.zip  && \
+    pip install jep==4.0.3 && \
     zypper -n clean --all
 
-ENV LD_PRELOAD=/usr/lib64/python2.7/config/libpython2.7.so
-ENV LD_LIBRARY_PATH=/usr/local/lib/python2.7/site-packages/talon:/usr/local/lib64/python2.7/site-packages/jep
+ENV LD_PRELOAD=/usr/lib64/python3.8/config-3.8-x86_64-linux-gnu/libpython3.8.so
+ENV LD_LIBRARY_PATH=/usr/lib/python3.8/site-packages/talon:/usr/lib64/python3.8/site-packages/jep
 ENV PYTHONPATH=/maven
