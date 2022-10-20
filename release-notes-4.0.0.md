@@ -4,7 +4,7 @@
 ${version-number}
 
 #### Breaking Changes
-- The image now runs Python 3.10 due to Python 2 packages no longer being available in openSUSE Tumbleweed.
+- The image now runs Python 3.8 due to Python 2 packages no longer being available in openSUSE Tumbleweed.
 
 #### New Features
 - The image is now based on [openSUSE Tumbleweed](https://get.opensuse.org/tumbleweed/).  
