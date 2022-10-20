@@ -22,13 +22,14 @@ FROM ${DOCKER_HUB_PUBLIC}/cafapi/prereleases:opensuse-jdk11-3.7.0-477072-SNAPSHO
 # Pinning version of scikit-learn to 1.0.1 to avoid this error: "Trying to unpickle estimator LinearSVC from version 1.0.1 when using version 1.1.2."
 RUN zypper -n refresh && \
     zypper -n update && \
-    zypper -n install python3-devel && \
-    zypper -n install python3-pip && \
-    zypper -n install python3-matplotlib && \
+    zypper -n install python38 && \
+    zypper -n install python38-devel && \
+    zypper -n install python38-pip && \
+    zypper -n install python38-matplotlib && \
     zypper -n install zlib-devel && \
-    zypper -n install python3-numpy-devel && \
-    zypper -n install python3-lxml && \
-    zypper -n install python3-scipy && \
+    zypper -n install python38-numpy-devel && \
+    zypper -n install python38-lxml && \
+    zypper -n install python38-scipy && \
     zypper -n install gcc-c++ && \
     pip install scikit-learn==1.0.1 && \
     pip install regex==2022.6.2 && \
@@ -36,6 +37,6 @@ RUN zypper -n refresh && \
     pip install jep==4.0.3 && \
     zypper -n clean --all
 
-ENV LD_PRELOAD=/usr/lib64/python3.10/config-3.10-x86_64-linux-gnu/libpython3.10.so
-ENV LD_LIBRARY_PATH=/usr/lib/python3.10/site-packages/talon:/usr/lib64/python3.10/site-packages/jep
+ENV LD_PRELOAD=/usr/lib64/python3.8/config-3.8-x86_64-linux-gnu/libpython3.8.so
+ENV LD_LIBRARY_PATH=/usr/lib/python3.8/site-packages/talon:/usr/lib64/python3.8/site-packages/jep
 ENV PYTHONPATH=/maven
